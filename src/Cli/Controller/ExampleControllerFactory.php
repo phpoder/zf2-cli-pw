@@ -34,7 +34,7 @@ class ExampleControllerFactory implements FactoryInterface
      */
     private function getAuthService(ServiceLocatorInterface $serviceLocatorInterface)
     {
-        /** @var @var AuthService $authService */
+        /** @var AuthService $authService */
         $authService = $serviceLocatorInterface->getServiceLocator()->get('Cli\Service\AuthService');
 
         return $authService;

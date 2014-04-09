@@ -33,12 +33,12 @@ class ExampleController extends AbstractActionController
      */
     public function sayhelloAction()
     {
-        $password = $this->authService->promptPassword(true);
+        $password = $this->authService->promptPassword();
 
         if ('secret' != $password) {
-            return PHP_EOL . 'Invalid password, permission Denied' . PHP_EOL;
+            return 'Invalid password, permission Denied' . PHP_EOL;
         }
         // Do the authenticated stuff, in this case, say Hello.
-        return PHP_EOL . 'Hello' . PHP_EOL;
+        return 'Hello' . PHP_EOL;
     }
 }
